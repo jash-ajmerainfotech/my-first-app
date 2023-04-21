@@ -1,10 +1,15 @@
-
-import './App.css';
+import DataTable from "./Components/DataTable";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Jash Tamakuwala</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<DataTable />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
